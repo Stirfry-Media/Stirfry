@@ -1,9 +1,6 @@
 build/
 temp/
 
-# IDE files
-.vscode/
-
 # Prerequisites
 *.d
 
