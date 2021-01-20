@@ -1,10 +1,21 @@
 
-#include <opencv4/opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 using namespace cv;
+#include <iostream>
+using namespace std;
+#include <cstdio>
 
-int main(int, char**) {
-    VideoCapture camera(0);
-    Mat frame;
-    camera >> frame;
-    imwrite("frame.jpg", frame);
+VideoCapture camera(0);
+Mat frame;
+
+int record() {
+    while (true) {
+        camera >> frame;
+        imwrite("frame.jpg", frame);
+        remove("frame.jpg");
+    }
+}
+
+int main () {
+    record();
 }

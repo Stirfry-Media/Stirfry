@@ -1,6 +1,10 @@
 build/
 temp/
 
+# Unnecesary IDE files
+launch.json
+tasks.json
+
 # Prerequisites
 *.d
 
